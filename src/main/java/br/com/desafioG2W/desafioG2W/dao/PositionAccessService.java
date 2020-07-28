@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
 
-@Repository
+@Repository("position")
 public class PositionAccessService implements PositionDao {
 
     @Override

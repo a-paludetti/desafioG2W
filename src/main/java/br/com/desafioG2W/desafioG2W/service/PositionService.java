@@ -1,13 +1,18 @@
 package br.com.desafioG2W.desafioG2W.service;
 
 import br.com.desafioG2W.desafioG2W.dao.PositionDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PositionService {
     private final PositionDao positionDao;
 
-    public PositionService(PositionDao positionDao) {
+    @Autowired
+    public PositionService(@Qualifier("position") PositionDao positionDao) {
         this.positionDao = positionDao;
     }
 

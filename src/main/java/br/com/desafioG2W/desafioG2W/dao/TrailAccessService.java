@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
 
-@Repository
+@Repository("trail")
 public class TrailAccessService implements TrailDao {
     @Override
     public void addTrail(JSONObject object) {
