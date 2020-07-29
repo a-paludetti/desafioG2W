@@ -16,7 +16,7 @@ public class PositionAccessService implements PositionDao {
         try {
             Position position = new Position();
             position.setCargo_nome(object.getString("Nome"));
-//            cargo.setTrilha_id(new CargoApi().getTrilha(object.get("trilha")));
+            position.setTrail_id(object.getInt("trilha"));
             position.setCargo_missao(object.getString("cargo missao"));
             position.setData_atualizacao(Date.valueOf(object.getString("atualizacao")));
             //new CargoAPI().save(cargo);

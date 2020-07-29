@@ -9,12 +9,13 @@ import java.sql.Date;
 
 @Data
 @NoArgsConstructor
-@Entity(name = "trilha")
+@Entity
+@Table(name = "trail")
 public class Trail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ID;
+    private int id;
     private String trilha_nome;
     private String diretoria;
     private String missao_formal;

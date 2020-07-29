@@ -12,7 +12,7 @@ public class PositionService {
     private final PositionDao positionDao;
 
     @Autowired
-    public PositionService(@Qualifier("position") PositionDao positionDao) {
+    public PositionService(@Qualifier("MySQL") PositionDao positionDao) {
         this.positionDao = positionDao;
     }
 

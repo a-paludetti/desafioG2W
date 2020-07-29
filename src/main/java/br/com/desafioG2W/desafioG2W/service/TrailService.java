@@ -12,7 +12,7 @@ public class TrailService {
     private final TrailDao trailDao;
 
     @Autowired
-    public TrailService(@Qualifier("trail") TrailDao trailDao) {
+    public TrailService(@Qualifier("MySQL") TrailDao trailDao) {
         this.trailDao = trailDao;
     }
 

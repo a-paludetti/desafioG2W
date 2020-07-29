@@ -3,7 +3,7 @@ services:
 
   db:
     image: mysql
-    container_name: database
+    container_name: mysqldb-container
     volumes:
       - starter-data:/var/lib/mysql/data
     ports:
