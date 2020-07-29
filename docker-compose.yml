@@ -2,17 +2,16 @@ version: '3.0'
 services:
 
   db:
-    image: mysql
-    container_name: mysqldb-container
+    image: ansible/postgresql
+    container_name: database
     volumes:
-      - starter-data:/var/lib/mysql/data
+      - starter-data:/var/lib/postgresql/data
     ports:
-    - "3306:3006"
+    - "5432:5432"
     environment:
-      - MYSQL_ROOT_PASSWORD = pass
-      - MYSQL_USER = user
-      - MYSQL_PASSWORD = password
-      - MYSQL_DATABASE = database
+      - POSTGRESQL_USER = user
+      - POSTGRESQL_PASSWORD = password
+      - POSTGRESQL_DATABASE = database
   web:
     build: ./DesafioG2WApplication
     container_name: web-app
